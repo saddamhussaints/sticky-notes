@@ -29,42 +29,61 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+// Sticky Notes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Table of Contents
+Installation
+Features
+1. Draggable Notes
+2. Add New Notes
+3. Delete Notes
+4. Edit Notes
+5. Pin Notes
+1. Installation <a name="installation"></a>
+To run the Draggable Notes App on your local machine, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+bash
+Copy code
+git clone https://github.com/your-username/draggable-notes-app.git
+Navigate to the project directory:
 
-## Learn More
+bash
+Copy code
+cd draggable-notes-app
+Install dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+bash
+Copy code
+npm install
+Start the application:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+bash
+Copy code
+npm start
+2. Features <a name="features"></a>
+1. Draggable Notes <a name="1-draggable-notes"></a>
+Description:
+All notes on the board are draggable.
+Users can freely move notes to any position on the board.
+2. Add New Notes <a name="2-add-new-notes"></a>
+Description:
+Users can add new notes by clicking on the "+" button.
+Each new note is draggable by default.
+3. Delete Notes <a name="3-delete-notes"></a>
+Description:
+Users can delete notes by clicking on the "x" button.
+A confirmation prompt may be implemented to prevent accidental deletion.
+4. Edit Notes <a name="4-edit-notes"></a>
+Description:
+Users can edit notes directly by clicking on the text.
+Clicking the "edit" button places the cursor at the beginning of the note for easy editing.
+5. Pin Notes <a name="5-pin-notes"></a>
+Description:
+Users can pin notes to make them non-draggable.
+Pinned notes prevent other notes from overlapping with them.
+Clicking the "pin" button toggles the pinned state of a note.
+Contributing
+Contributions to this project are welcome! Feel free to submit bug reports, feature requests, or pull requests on the GitHub repository.
