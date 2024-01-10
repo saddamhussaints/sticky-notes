@@ -6,6 +6,7 @@ export default function StickyNotes({ note, deleteNotes, updateNotes }) {
     const textareaRef = useRef(null);
     const stickyNotesRef = useRef(null);
     const [allowMove, setAllowMove] = useState(false)
+    const [isPinned, setIsPinned] = useState(true);
     const [dx, setDx] = useState(0)
     const [dy, setDy] = useState(0)
 
@@ -31,7 +32,7 @@ export default function StickyNotes({ note, deleteNotes, updateNotes }) {
         setDy(e.clientY - dimensions.y)
     }
     const handleMouseMove = (e) => {
-        if (allowMove) {
+        if (allowMove && isPinned) {
             const x = e.clientX - dx
             const y = e.clientY - dy
             stickyNotesRef.current.style.left = x + "px"
@@ -43,10 +44,14 @@ export default function StickyNotes({ note, deleteNotes, updateNotes }) {
         console.log(allowMove + "MouseUp")
 
     }
+    const handleTogglePin = () => {
+        setIsPinned((prevIsPinned) => !prevIsPinned);
+      };
     return (
         <div ref={stickyNotesRef} className='note-item' onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}>
+                <button onClick={handleTogglePin}>{isPinned ? 'Pin' : 'Unpin'}</button>
             <div className='sticky-note-header'>
                 <div></div>
                 <button className='delete-btn' onClick={() => deleteNotes(note.id)}>X</button>
